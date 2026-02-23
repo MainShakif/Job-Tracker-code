@@ -59,7 +59,7 @@
           </h1>
         </header>
 
-        <div class="grid md:grid-cols-3 gap-4 mb-8 max-w-5xl mx-auto">
+        <section class="grid md:grid-cols-3 gap-4 mb-8 max-w-5xl mx-auto">
           <div class="card bg-base-100 drop-shadow-lg">
             <div class="card-body">
               <p>Total</p>
@@ -70,7 +70,7 @@
           <div class="card bg-base-100 drop-shadow-lg">
             <div class="card-body">
               <p>Interview</p>
-              <h2 id="interviewCount" class="text-2xl text-green-500 font-bold">
+              <h2 id="interviewCount" class="text-2xl text-success font-bold">
                 0
               </h2>
             </div>
@@ -79,13 +79,15 @@
           <div class="card bg-base-100 drop-shadow-lg">
             <div class="card-body">
               <p>Rejected</p>
-              <h2 id="rejectedCount" class="text-2xl text-red-500 font-bold">
+              <h2 id="rejectedCount" class="text-2xl text-error font-bold">
                 0
               </h2>
             </div>
           </div>
-        </div>
+        </section>
+
         <hr class="mb-6 max-w-5xl mx-auto" />
+
         <div
           class="flex justify-between items-center max-w-5xl mx-auto mb-[70px]"
         >
@@ -93,6 +95,7 @@
           <p id="tabCount">8 jobs</p>
         </div>
 
+        <!-- tabs Container -->
         <div class="flex gap-2 mb-6 max-w-5xl mx-auto">
           <button id="allTab" class="btn btn-info btn-sm">All</button>
           <button id="interviewTab" class="btn btn-outline btn-sm">
@@ -102,6 +105,203 @@
             Rejected
           </button>
         </div>
+
+        <!--Jobs cards Container  -->
+        <section id="jobContainer" class="space-y-4 max-w-5xl mx-auto">
+          <!-- job card 1 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">Mobile First Corp</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+
+              <p>React Native Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+
+              <p>Remote • Full-time • $130k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 2 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">WebFlow Agency</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>Web Designer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>USA • Part-time • $80k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 3 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">TechNova</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>Frontend Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>Remote • $90k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 4 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">CodeCraft</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>JavaScript Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>Berlin • $100k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 5 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">DesignHub</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>UI Designer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>London • $85k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 6 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">NextGen</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>Backend Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>Canada • $95k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 7 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">DevSolutions</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>Full Stack Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>Toronto • $110k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- job card 8 -->
+          <div class="card bg-base-100 shadow job-card">
+            <div class="card-body">
+              <div class="flex justify-between">
+                <h2 class="font-bold">StartupX</h2>
+                <button class="btn btn-circle btn-sm delete-btn">
+                  <img src="./trash.png" alt="" />
+                </button>
+              </div>
+              <p>Junior Developer</p>
+              <span class="badge status-badge">NOT APPLIED</span>
+              <p>Remote • $50k</p>
+
+              <div class="flex gap-2 mt-3">
+                <button class="btn btn-success btn-sm interview-btn">
+                  Interview
+                </button>
+                <button class="btn btn-outline btn-error btn-sm reject-btn">
+                  Rejected
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </body>
     </html>
   </body>
