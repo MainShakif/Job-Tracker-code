@@ -110,6 +110,34 @@ document.getElementById("allTab").addEventListener("click", function () {
   checkEmptyState();
 });
 
+//
+function filterTab(status) {
+  const cards = document.getElementsByClassName("job-card");
+  let visibleJobs = 0;
+  let totalCards = cards.length;
+
+  for (let card of cards) {
+    const badge = card.querySelector(".status-badge");
+    if (status === "all" || badge.innerText === status.toUpperCase()) {
+      card.style.display = "block";
+      visibleJobs++;
+    } else {
+      card.style.display = "none";
+    }
+  }
+
+  // Update tabCount to show "visible of total" for filtered tabs
+  if (status === "all") {
+    tabCount.innerText = totalCards + " jobs";
+  } else {
+    tabCount.innerText = visibleJobs + " of " + totalCards + " jobs";
+  }
+
+  // Show empty state if needed
+  if (visibleJobs === 0 && status !== "all") showEmptyState(status);
+}
+//
+
 //Interview tab
 
 document.getElementById("interviewTab").addEventListener("click", function () {
@@ -205,7 +233,17 @@ document.getElementById("rejectedTab").addEventListener("click", function () {
   updateCount();
 });
 
-// //
-cards.remove();
+//
+function updateCount() {
+  var visible = 0;
+
+  for (var i = 0; i < cards.length; i++) {
+    if (cards[i].style.display !== "none") {
+      visible++;
+    }
+  }
+
+  tabCount.innerText = visible + " of " + totalJobs + " jobs";
+}
+
 updateCount();
-checkEmptyState();
