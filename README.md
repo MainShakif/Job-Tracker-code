@@ -60,8 +60,8 @@ ANS:
    ANS:
    1. event.stopPropagation()
         The Shield: Stops the event from traveling.
-      In the DOM, events "bubble" up. If you click a button inside a <div>,
-      the click event first hits the button, then moves to the <div>, then to the <body>, and so on.
+      In the DOM, events "bubble" up. If you click a button inside a DIV element,
+      the click event first hits the button, then moves to the DIV element, then to the BODY element, and so on.
       Calling stopPropagation() prevents the event from "climbing" any higher.
 
       Use case: You have a "Delete" button inside a clickable card. You want the
