@@ -1,21 +1,21 @@
-var interviewCount = document.getElementById("interviewCount");
-var rejectedCount = document.getElementById("rejectedCount");
-var tabCount = document.getElementById("tabCount");
+let interviewCount = document.getElementById("interviewCount");
+let rejectedCount = document.getElementById("rejectedCount");
+let tabCount = document.getElementById("tabCount");
 
-var interviewTotal = 0;
-var rejectedTotal = 0;
-var totalJobs = 8;
+let interviewTotal = 0;
+let rejectedTotal = 0;
+let totalJobs = 8;
 
-var cards = document.getElementsByClassName("job-card");
+let cards = document.getElementsByClassName("job-card");
 
-var interviewButtons = document.getElementsByClassName("interview-btn");
+let interviewButtons = document.getElementsByClassName("interview-btn");
 
 // interview button functionality
-for (var i = 0; i < interviewButtons.length; i++) {
+for (let i = 0; i < interviewButtons.length; i++) {
   interviewButtons[i].addEventListener("click", function () {
-    var card = this.closest(".job-card");
-    var badge = card.querySelector(".status-badge");
-    var oldStatus = badge.innerText;
+    let card = this.closest(".job-card");
+    let badge = card.querySelector(".status-badge");
+    let oldStatus = badge.innerText;
 
     if (oldStatus === "REJECTED") {
       rejectedTotal--;
@@ -33,5 +33,46 @@ for (var i = 0; i < interviewButtons.length; i++) {
 
     interviewCount.innerText = interviewTotal;
     rejectedCount.innerText = rejectedTotal;
+  });
+}
+
+// rejected button functionality
+let rejectButtons = document.getElementsByClassName("reject-btn");
+
+for (let i = 0; i < rejectButtons.length; i++) {
+  rejectButtons[i].addEventListener("click", function () {
+    let card = this.closest(".job-card");
+    let badge = card.querySelector(".status-badge");
+    let oldStatus = badge.innerText;
+
+    if (oldStatus === "INTERVIEW") {
+      interviewTotal--;
+    }
+
+    if (oldStatus !== "REJECTED") {
+      rejectedTotal++;
+    }
+
+    badge.innerText = "REJECTED";
+
+    // badge color change
+    badge.classList.remove("badge-neutral", "badge-success");
+    badge.classList.add("badge-error");
+
+    interviewCount.innerText = interviewTotal;
+    rejectedCount.innerText = rejectedTotal;
+  });
+}
+
+// delete job button created
+let deleteButtons = document.getElementsByClassName("delete-btn");
+
+for (let i = 0; i < deleteButtons.length; i++) {
+  deleteButtons[i].addEventListener("click", function () {
+    let card = this.closest(".job-card");
+    card.remove();
+
+    totalJobs--;
+    updateCount();
   });
 }
