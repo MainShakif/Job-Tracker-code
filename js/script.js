@@ -97,8 +97,6 @@ function checkEmptyState() {
   }
 }
 
-//
-
 // All Tab
 document.getElementById("allTab").addEventListener("click", function () {
   let cards = document.getElementsByClassName("job-card");
@@ -136,10 +134,9 @@ function filterTab(status) {
   // Show empty state if needed
   if (visibleJobs === 0 && status !== "all") showEmptyState(status);
 }
-//
+
 
 //Interview tab
-
 document.getElementById("interviewTab").addEventListener("click", function () {
   var jobContainer = document.getElementById("jobContainer");
   var cards = document.getElementsByClassName("job-card");
