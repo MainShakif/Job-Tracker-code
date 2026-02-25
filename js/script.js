@@ -135,7 +135,6 @@ function filterTab(status) {
   if (visibleJobs === 0 && status !== "all") showEmptyState(status);
 }
 
-
 //Interview tab
 document.getElementById("interviewTab").addEventListener("click", function () {
   var jobContainer = document.getElementById("jobContainer");
@@ -173,23 +172,6 @@ document.getElementById("interviewTab").addEventListener("click", function () {
   }
 
   updateCount();
-});
-
-// Rejected tab
-document.getElementById("rejectedTab").addEventListener("click", function () {
-  let cards = document.getElementsByClassName("job-card");
-  for (let i = 0; i < cards.length; i++) {
-    let badge = cards[i].querySelector(".status-badge");
-
-    if (badge.innerText === "REJECTED") {
-      cards[i].style.display = "block";
-    } else {
-      cards[i].style.display = "none";
-    }
-  }
-
-  updateCount();
-  checkEmptyState();
 });
 
 // Rejected Tab
